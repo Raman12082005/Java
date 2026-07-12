@@ -1,3 +1,4 @@
+// Method 01
 class CheckInteger
 {
     public static void main(String[] args) {
@@ -26,3 +27,27 @@ class CheckInteger
         System.out.println("valid integers: " +valid);
         System.out.println("Invalid integers: " +invalid);
     }
+
+
+// Method 02
+class CheckInteger
+{
+   public static void main(String[] args) {
+       int valid = 0;
+       int invalid = 0;
+     
+      for(int i=0; i<args.length; i++){
+         try{
+            Integer.parseInt(args[i]);
+            valid++;
+         }
+         catch(Exception ex){
+            invalid++;
+         }
+      }
+     
+     
+       System.out.println("valid integers: " +valid);
+       System.out.println("Invalid integers: " +invalid);
+   }
+}
